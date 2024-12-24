@@ -1,0 +1,48 @@
+ Note 1: 
+
+ While Printing the pattern 
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+// If you use j=1;j<=n;j++ ---> It was totally wrong
+//        Use j=1;j<=i;j++ ---> Corrected pattern
+_______________________________________________________________
+Note 2:
+
+To print a full pyramid of number
+        1
+      2 3 2
+    3 4 5 4 3
+  4 5 6 7 6 5 4
+5 6 7 8 9 8 7 6 5
+Logic 1:
+    Printing Spaces
+    j=1         j<=n-i      j++
+Logic 2:
+    Printing first half numbers (from i to (2*i)-1)
+    k=i         k=(2*i)-1   k++
+Logic 3:
+    Printing second half numbers (from 2*(i-1) to i)
+    l=2*(i-1)   l>=i        l--
+_______________________________________________________________
+Note 3:
+
+Logic Difference for Normal and Inverted Pyramids:
+  -> Just change the logic of i in reverse manner
+_______________________________________________________________
+Note 4: 
+
+Know This:
+ We can form diamond and hourglass pattern
+    By using Normal and Inverted Pyramids
+_______________________________________________________________
+Note 5:
+
+-----Difference between Hollow and Complete pattern-----
+1) They have to follow same space logic
+2) The inner space condition is of two parts
+  i) (j<2*i) for hollow pattern and (j<=2*i-1) for complete pattern
+  ii) We have to use if condition to print stars and Spaces
+3) Do not forget to print (newline) between two for loop
